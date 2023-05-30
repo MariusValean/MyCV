@@ -4,91 +4,101 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Marius CV</title>
+		<title>Marius's CV</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
-
 	<body>
 		<header>
-			<div class="blur-image"></div>
-			<div class="main-info">
-				<h1>Curriculum Vitae</h1>
-				<img
-					class="photo"
-					src="131401594_3610043935721291_8799266516966732967_n.jpg"
-					alt=""
-					width="100"
-				/>
-				<h2>Marius Valean</h2>
-
-				<p id="motto"><span> Student @ Inginerie Chimica</span></p>
+			<div id="header-wrapper">
+				<div>
+					<img id="dev-image" src="poza.jpg" height="50" />
+				</div>
+				<div>
+					<h1 id="dev-title">Valean Marius- Student @ FastTrackIT</h1>
+				</div>
 			</div>
 
 			<ul id="top-menu-bar">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Skills</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Languages</a></li>
+				<li><a href="#" data-page="home">Home</a></li>
+				<li><a href="#" data-page="skills">Skills</a></li>
+				<li>
+					<a href="#" data-page="languages">Known Languages</a>
+				</li>
+				<li><a href="#" data-page="projects">Projects</a></li>
 			</ul>
 		</header>
-		<section id="skills">
-			<div>
-				<h2>Skills</h2>
-				<ul>
-					<li class="favorite">
+
+		<section id="content">
+			<div id="side-menu">
+				<section>
+					<form action="">
 						<div>
-							<p>HTML</p>
-							<div class="skill-level">
-								<div class="level-4"></div>
-							</div>
+							<label for="subscriberEmail">Enter your Email</label>
+							<input
+								type="email"
+								required
+								name="email"
+								id="subscriberEmail"
+								placeholder="your@email.com"
+							/>
 						</div>
-					</li>
-					<li class="favorite">
-						<div>
-							<p>CSS</p>
-							<div class="skill-level">
-								<div class="level-3"></div>
-							</div>
-						</div>
-					</li>
-					<li class="favorite">
-						<div>
-							<p>JavaScript</p>
-							<div class="skill-level">
-								<div class="level-1"></div>
-							</div>
-						</div>
-					</li>
-				</ul>
+					</form>
+					<div>
+						<label for="subscriber">Name:</label>
+						<input
+							type="text"
+							required
+							name="nume"
+							id="subscriber"
+							placeholder="Full Name"
+						/>
+					</div>
+					<button type="submit">Subscribe</button>
+				</section>
+
+				<section>To be contiuned</section>
 			</div>
 
-			<h3>Known languages</h3>
+			<div id="main">
+				<div id="home" class="page">
+					<h2>Home</h2>
 
-			<table border="1">
-				<tr>
-					<td>Romanian</td>
-					<td>Native</td>
-				</tr>
-				<tr>
-					<td>English</td>
-					<td>B2</td>
-				</tr>
-			</table>
-		</section>
+					<p>Some info about me</p>
+				</div>
 
-		<section id="contact">
-			<form action="" method="get">
-				<input type="email" name="email" id="userEmail" />
-				<button type="submit">Contact me</button>
-			</form>
+				<div id="skills" class="page">
+					<h2>Skills</h2>
+
+					<ul id="skills-list"></ul>
+				</div>
+
+				<div id="languages" class="page">
+					<h2>Known Languages</h2>
+					<table id="language-table" border="1">
+						<tr>
+							<th>Language</th>
+							<th>Level</th>
+						</tr>
+						<tr>
+							<td>Romanian</td>
+							<td>Native</td>
+						</tr>
+						<tr>
+							<td>English</td>
+							<td>C1</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="projects" class="page">
+					<h2>Projects</h2>
+				</div>
+			</div>
 		</section>
 
 		<footer>
-			<p style="text-align: center">
-				<a href="https://www.facebook.com/valean.marius.5/">Facebook</a>
-
-				2022
-			</p>
+			<a target="_blank" href="https://www.google.com">Google</a>
 		</footer>
+		<script src="index.js"></script>
 	</body>
 </html>
